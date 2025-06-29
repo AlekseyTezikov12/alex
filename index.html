@@ -3,68 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сон в коме - Платформер</title>
+    <title>Сборник YouTube видео</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="gameContainer" class="hidden">
-        <div id="uiOverlay">
-            <div id="topUI">
-                <div id="healthBar">
-                    <div id="healthFill"></div>
-                </div>
-                <div id="levelInfo">
-                    <span id="levelNumber">Уровень 1</span>
-                    <span id="timer">00:00</span>
-                </div>
-                <div id="scoreDisplay">
-                    <span id="score">0</span>
-                </div>
-            </div>
-            
-            <div id="gameStats">
-                <div id="gravityIndicator" class="stat-indicator">
-                    <span>Гравитация</span>
-                    <div id="gravityBar"></div>
-                </div>
-                <div id="weaponIndicator" class="stat-indicator">
-                    <span>Оружие</span>
-                    <div id="weaponStatus">Нет</div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="theme-switcher">
+            <button id="theme-btn">Сменить тему</button>
         </div>
-        
-        <canvas id="gameCanvas" width="800" height="600"></canvas>
-        
-        <div id="controls">
-            <div class="control-group">
-                <span>Управление:</span>
-                <div class="control-item">← → Движение</div>
-                <div class="control-item">↑ Прыжок</div>
-                <div class="control-item">Пробел Атака</div>
-            </div>
+        <div id="lang-switcher">
+            <label for="lang-select">Язык:</label>
+            <select id="lang-select">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+            </select>
         </div>
+        <h1>Сборник интересных YouTube видео</h1>
+        <div id="folders"></div>
+        <div id="sections"></div>
     </div>
-    
-    <div id="mainMenu" class="menu">
-        <h1 class="game-title">СОН В КОМЕ</h1>
-        <div class="menu-buttons">
-            <button id="startGame" class="menu-btn">Начать игру</button>
-            <button id="showControls" class="menu-btn">Управление</button>
-            <button id="showCredits" class="menu-btn">Об игре</button>
-        </div>
-    </div>
-    
-    <div id="pauseMenu" class="menu hidden">
-        <h2>Пауза</h2>
-        <div class="menu-buttons">
-            <button id="resumeGame" class="menu-btn">Продолжить</button>
-            <button id="restartLevel" class="menu-btn">Начать заново</button>
-            <button id="mainMenuBtn" class="menu-btn">Главное меню</button>
-        </div>
-    </div>
-    
     <script src="script.js"></script>
 </body>
-</html>
+</html> 
